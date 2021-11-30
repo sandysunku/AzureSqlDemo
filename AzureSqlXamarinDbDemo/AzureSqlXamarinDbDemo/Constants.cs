@@ -2,6 +2,6 @@
 {
     public static class Constants
     {
-        public static string ApiUri = "https://azurexamarindbdemo.azurewebsites.net/api/purchaseitems/";
+        public static string ApiUri = "https://youazurewebsiteaddress/apiaddress";
     }
 }
