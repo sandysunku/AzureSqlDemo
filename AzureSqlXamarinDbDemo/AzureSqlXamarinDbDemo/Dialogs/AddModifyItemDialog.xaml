@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzureSqlXamarinDbDemo.Dialogs.AddModifyItemDialog"
+             xmlns:prism="http://prismlibrary.com"
+             prism:DialogLayout.RelativeWidthRequest="0.80">
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Frame Grid.ColumnSpan="2" Margin="0,0,15,10" Grid.Column="0" Grid.Row="1" CornerRadius="10" BackgroundColor="White" Padding="-5">
+                <StackLayout Spacing="30" Padding="40" Margin="0,0,0,0" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Item Name"  VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+                        <Entry HeightRequest="50" WidthRequest="300" Text="{Binding ItemName}" MaxLength="15"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Item Description"  VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+                        <Entry HeightRequest="50" WidthRequest="300" Text="{Binding ItemDescription}" MaxLength="15"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Item Value"  VerticalOptions="CenterAndExpand" HorizontalOptions="Start" />
+                        <Entry HeightRequest="50" WidthRequest="300" Text="{Binding ItemAmount}" Keyboard="Numeric" MaxLength="6"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Button Text="{Binding ContextText}" WidthRequest="100" HorizontalOptions="Center" HeightRequest="50" Command="{Binding AddModifyItemCommand}"/>
+                    </StackLayout>
+                    <Label Text="{Binding Status}" Margin="0,40,0,0" HorizontalOptions="CenterAndExpand" FontSize="Subtitle"/>
+                </StackLayout>
+            </Frame>
+            <ImageButton Source="close.png" Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent" CornerRadius="20" WidthRequest="40" MinimumHeightRequest="40" Margin="0,30,0,-30"  
+                         HorizontalOptions="End" VerticalOptions="Start" HeightRequest="50" Command="{Binding CloseCommand}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

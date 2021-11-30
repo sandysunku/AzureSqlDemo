@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzureSqlXamarinDbDemo.Views.OptionsPage"
+             xmlns:prism="http://prismlibrary.com" prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <Frame BackgroundColor="LightBlue" Padding="24" CornerRadius="0">
+            <StackLayout>
+                <Frame CornerRadius="15" BackgroundColor="LightCoral" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                    <Label HorizontalOptions="CenterAndExpand" Text="Welcome to Azure Web Api Demo" FontSize="Medium"/>
+                </Frame>
+                <StackLayout Spacing="30" Orientation="Horizontal" Margin="0,40,0,0" HorizontalOptions="FillAndExpand">
+                    <ImageButton Padding="20" BackgroundColor="LightCoral" Source="display.png" CornerRadius="10" WidthRequest="280" HeightRequest="140" HorizontalOptions="CenterAndExpand" Command="{Binding DisplayCommand}"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

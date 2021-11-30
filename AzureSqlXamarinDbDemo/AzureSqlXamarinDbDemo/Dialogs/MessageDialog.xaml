@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzureSqlXamarinDbDemo.Dialogs.MessageDialog"
+             xmlns:prism="http://prismlibrary.com"
+             prism:DialogLayout.RelativeWidthRequest="0.75" >
+    <ContentView.Content>
+        <Frame Padding="10" CornerRadius="15">
+            <StackLayout HorizontalOptions="FillAndExpand" Spacing="40" BackgroundColor="White">
+                <Label Text="{Binding Information}" HorizontalOptions="CenterAndExpand" />
+                <Button Text="Ok" Command="{Binding OkCommand}"/>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>
